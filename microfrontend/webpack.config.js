@@ -43,14 +43,13 @@ module.exports = {
       shared: {
         ...deps,
         react: {
-          singleton: true,
-          requiredVersion: deps.react,
+          eager: true,
         },
         'react-dom': {
           singleton: true,
           requiredVersion: deps['react-dom'],
         },
-  },
+      },
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
